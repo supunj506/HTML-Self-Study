@@ -15,12 +15,12 @@
 <body>
 <h1>Form Content</h1>
 <hr>
-<form action="najsmsk" method="post">
+<form action="najsmsk" method="post" id="form">
     <fieldset>
         <legend>Customer Data</legend>
 
         <label for="cusId">id</label>
-        <input type="text" id="cusId" name="customerID" >
+        <input type="text" id="cusId" name="customerID"  >
         <br>
         <br>
         <label for="cusName">name</label>
@@ -36,33 +36,48 @@
         <br>
         <br>
         <label for="cusPassword">Password</label>
-        <input type="password" id="cusPassword" name="customerSalary">
+        <input type="password" id="cusPassword" name="customerSalary" required>
         <br>
         <br>
-        <label for="File">File</label>
-        <input type="file" id="File" name="customerSalary">
-        <br>
-        <br>
-        <br>
-        <br>
-        <label for="type">Type</label>
-        <input type="range" id="type">
-        <br>
-        <br>
-        <label for="type">Type</label>
-        <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
+<!--        <label for="File">File</label>-->
+<!--        <input type="file" id="File" name="customerSalary">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <label for="type">Type</label>-->
+<!--        <input type="range" id="type">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <label for="type">Type</label>-->
+<!--        <textarea name="massage" id="massage" cols="30" rows="10"></textarea>-->
+<!--        <br>-->
+<!--        <br>-->
+        <label for="male">male</label>
+        <input type="radio" id="male" name="gender" required value="Male">
+        <label for="female">female</label>
+        <input type="radio" id="female" name="gender" required value="Female">
         <br>
         <br>
 
-
-
-        <button>Save Customer</button>
-        <br>
-        <br>
-        <button type="submit"> Submit </button>
         <button type="reset"> Reset </button>
+        <br>
+        <br>
+        <button formaction="saveCustomer" form="form"> Save Customer </button>
+        <br>
+        <br>
+        <button type="button" formaction="updateCustomer"> Update Customer </button>
+        <br>
+        <br>
 
     </fieldset>
 </form>
+<br>
+<br>
+<hr>
+<br>
+<button form="form" formaction="save" formmethod="post">Save</button>
+<button form="form" formaction="update" formmethod="get">Update</button>
+<button form="form" formaction="delete" formmethod="get">Delete</button>
 </body>
 </html>
