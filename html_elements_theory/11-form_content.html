@@ -99,6 +99,16 @@
         <br>
         <br>
 
+        <lable name="time">time selection</lable>
+        <input type="time" name="time" list="timeselect">
+        <datalist id="timeselect">
+            <option value="12:00">
+            <option value="14:00" >
+            <option value="17:00">
+        </datalist>
+        <br>
+        <br>
+
         <button type="reset"> Reset </button>
         <br>
         <br>
@@ -106,6 +116,15 @@
         <br>
         <br>
         <button type="button" formaction="updateCustomer"> Update Customer </button>
+        <br>
+        <br>
+        <lable for="progress">check Progress</lable>
+        <progress id="progress" max="100" value="50" ></progress>
+        <br>
+        <br>
+
+        <lable for="meter">set Value Range</lable>
+        <meter id="meter"  min="0" max="100" low="30" high="50"  optimum="80" value="50" ></meter>
         <br>
         <br>
 
@@ -118,5 +137,16 @@
 <button form="form" formaction="save" formmethod="post" formtarget="_blank">Save</button>
 <button form="form" formaction="update" formmethod="get">Update</button>
 <button form="form" formaction="delete" formmethod="get">Delete</button>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<form oninput="out.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="range" min="0" max="100" name="a">
+    <input type="text" name="b">
+    <output name="out">0</output>
+</form>
 </body>
 </html>
